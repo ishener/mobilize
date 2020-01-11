@@ -1,24 +1,10 @@
-# README
+# Task for Mobilize
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. After running the application create new members with this request:
 
-Things you may want to cover:
+curl localhost:3000/addMembers  -H 'Content-Type: application/json'  -d '{ "emails": [ { "email": "test1@example.com", "name": "test1" }, { "email": "test2@example.com", "name": "test2" } ] }' 
 
-* Ruby version
 
-* System dependencies
+2. Invite members by email using this request:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+curl localhost:3000/inviteMembers  -H 'Content-Type: application/json'  -d '{ "emails": ["test1@example.com", "test2@example.com"] }' 

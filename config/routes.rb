@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   #
-  post 'say', to: 'application#say'
+  post 'addMembers', to: 'application#addMembers'
+  post 'inviteMembers', to: 'application#inviteMembers'
 end
